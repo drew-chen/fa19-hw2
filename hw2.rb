@@ -1,9 +1,21 @@
 def squared_sum(a, b)
-  # Q1 CODE HERE
+  (a + b) ** 2
 end
 
 def sort_array_plus_one(a)
-  # Q2 CODE HERE
+  for i in 0..a.length-1 do
+    max_index = i
+    for j in i..a.length-1 do
+      max_index = j if a[max_index] < a[j]
+    end
+    temp = a[i]
+    a[i] = a[max_index]
+    a[max_index] = temp
+  end
+  for i in 0..a.length-1 do
+    a[i] += 1
+  end
+  a
 end
 
 def combine_name(first_name, last_name)
