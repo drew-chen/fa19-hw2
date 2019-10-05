@@ -4,13 +4,13 @@ end
 
 def sort_array_plus_one(a)
   for i in 0..a.length-1 do
-    max_index = i
+    min_index = i
     for j in i..a.length-1 do
-      max_index = j if a[max_index] < a[j]
+      min_index = j if a[min_index] > a[j]
     end
     temp = a[i]
-    a[i] = a[max_index]
-    a[max_index] = temp
+    a[i] = a[min_index]
+    a[min_index] = temp
   end
   for i in 0..a.length-1 do
     a[i] += 1
@@ -19,7 +19,7 @@ def sort_array_plus_one(a)
 end
 
 def combine_name(first_name, last_name)
-  # Q3 CODE HERE
+  "#{first_name} #{last_name}"
 end
 
 def blockin_time(a)
