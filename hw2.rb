@@ -57,5 +57,5 @@ def scrabble(word)
     y: 4,
     z: 10
   }
-  # Q5 CODE HERE
+  word.chars.collect{|word| values[word.intern]}.sum
 end
